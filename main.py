@@ -26,6 +26,7 @@ def add_item_to_list(items_list):
     new_item = Item(name_of_item, price_of_item, quantity_of_item)
     items_list.append(new_item)    
     return items_list
+    
 
 def cost_per_unit(item):
     for x in item:
