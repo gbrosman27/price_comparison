@@ -1,3 +1,6 @@
+from tkinter import *
+
+
 class Item:
     def __init__(self, name, price, servings):
         self.name = name
@@ -20,18 +23,31 @@ def item_count():
         
 
 def add_item_to_list(items_list):
-    name_of_item = input("What is the name of the item?  ")
-    price_of_item = float(input("What is the price of the item?  "))
-    servings_of_item = int(input("How many servings are in the item?  "))
-    new_item = Item(name_of_item, price_of_item, servings_of_item)
-    items_list.append(new_item)    
-    return items_list
+    try:
+        name_of_item = input("What is the name of the item?  ")
+        price_of_item = float(input("What is the price of the item?  "))
+        servings_of_item = int(input("How many servings are in the item?  "))
+        new_item = Item(name_of_item, price_of_item, servings_of_item)
+        items_list.append(new_item)  
+        return items_list  
+    except ValueError:
+        print("Enter valid input")
     
 
 def cost_per_unit(item):
+    cost_list = []
     for x in item:
         total = round(x.price / x.servings, 2)
-        print(f"The {x.name} cost per serving is: ${total}.")
+        result = f"The {x.name} cost per serving is: ${total}."
+        cost_list.append(result)
+    gui_kinter(cost_list)
+
+def gui_kinter(display_string_list):
+    root = Tk()
+    label = Label(root, text=display_string_list)
+    print(label)
+    label.pack()
+    root.mainloop()
 
 
 if __name__ == "__main__":
