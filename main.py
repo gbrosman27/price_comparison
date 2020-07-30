@@ -1,4 +1,4 @@
-class Item():
+class Item:
     def __init__(self, name, price, quantity):
         self.name = name
         self.price = price
@@ -16,7 +16,7 @@ def item_count():
             break
         else:
             print("I didn't recognize that.")
-    cost_per_unit(items)                 
+    cost_per_unit(items)
         
 
 def add_item_to_list(items_list):
@@ -36,4 +36,3 @@ def cost_per_unit(item):
 
 if __name__ == "__main__":
     item_count()
-
