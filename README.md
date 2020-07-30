@@ -1,2 +1,2 @@
 # price_comparison
- compares prices between objects
+ Compares prices per serving between grocery objects.
