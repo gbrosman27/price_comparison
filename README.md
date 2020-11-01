@@ -1,2 +1,3 @@
 # price_comparison
- Compares prices per serving between grocery objects. Messing with tkinter.
+Commandline App.
+Compares prices per serving between grocery objects. Uses tkinter.
