@@ -1,4 +1,6 @@
 from tkinter import *
+from tkinter import font
+from tkinter.font import BOLD, families
 
 
 class Item:
@@ -45,9 +47,11 @@ def cost_per_unit(item):
 
 def gui_kinter(display_string_list):
     root = Tk()
-    label = Label(root, text=display_string_list)
-    print(label)
-    label.pack()
+    text = Text(root, spacing1=2, font=BOLD)
+    # loop over the list and convert to string format with new line.
+    convert_list = '\n\n'.join(map(str, display_string_list)) 
+    text.insert(INSERT, convert_list)
+    text.pack()
     root.mainloop()
 
 
