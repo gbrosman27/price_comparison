@@ -10,6 +10,7 @@ class Item:
 
 def item_count():
     items_list = []
+    items = None
     while True:
         answer = input("Would you like to add an item (yes or no)?  ").lower()
         if answer == "yes":
